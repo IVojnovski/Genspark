@@ -3,6 +3,12 @@ import java.util.Scanner;
 public class DragonCave {
 	
 	public static void main(String[] args) {
+		/* main comment section
+		 * make player input bold
+		 * put try catch exception handling wherever input is received
+		 * make unit tests in the tests folder of every project
+		 * (need to configure properties of tests source folder in some way
+		 * to make it accept tests!!!!!!!!!!!!!!)*/
 		dragonCaveScenario();
 	}
 	
