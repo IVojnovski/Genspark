@@ -10,6 +10,12 @@
     <bean id = "Student" class = "org.genspark.Student" >
         <property name = "id" value = "4252462" />
         <property name = "name" value = "Isaiah" />
+        <property name = "ph" >
+            <util:list list-class = "java.util.ArrayList" value-type = "java.lang.String">
+                <value>5616764515</value>
+            </util:list>
+        </property>
+        <property name = "add" value = "Raleigh, NC, USA, 27545" />
     </bean>
 
 </beans>
