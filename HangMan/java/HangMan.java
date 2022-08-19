@@ -42,14 +42,28 @@ public class HangMan {
 		player.close();
 	}
 	static String compare (String input, String wrd, String und, String misLet, String repLet, int life) {
-		boolean check = false;
 		//character guess
 		//take the input as a string then isolate the character if the guess is
 		//no more than one letter and if it detects the word is more than one
 		//character then make an if statement that compares the entire word to the
 		//entire String and if wrong subtract one from lives by changing the boolean check
-		if (wrd.contains(input)) {
+		
+		if (input.length() > 1 && wrd.contains(input)) {
+			//complete word guess statement
+		}
+		if (input.length() <= 1 && wrd.contains(input)) {
+			//one character guess
+			char[] arr = wrd.toCharArray();
+			String ans = "";
 			
+			for (int i = 0;i < arr.length;i++) {
+				if (arr[i] + "" == input) {
+					ans += input;
+				}
+				else {
+					ans += " _";
+				}
+			}
 		}
 		
 		//word guess
