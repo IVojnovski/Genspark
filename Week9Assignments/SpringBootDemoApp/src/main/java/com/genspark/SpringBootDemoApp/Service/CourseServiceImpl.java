@@ -4,14 +4,12 @@ import com.genspark.SpringBootDemoApp.Dao.CourseDao;
 import com.genspark.SpringBootDemoApp.Entity.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class CourseServiceImpl implements CourseService {
-
     @Autowired
     private CourseDao courseDao;
 
@@ -28,7 +26,7 @@ public class CourseServiceImpl implements CourseService {
             course = c.get();
         }
         else {
-            throw new RuntimeException(" Course not found for id :: " + courseId);
+            throw new RuntimeException("Course not found");
         }
         return course;
     }

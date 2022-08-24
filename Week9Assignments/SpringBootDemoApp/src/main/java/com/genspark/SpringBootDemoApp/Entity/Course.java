@@ -5,18 +5,21 @@ import javax.persistence.*;
 @Entity
 @Table(name = "tbl_courses")
 public class Course {
+
     @Id
     @Column(name = "c_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int courseId;
+
     private String title;
+
     private String instructor;
 
-    public Course() {
+    public Course () {
 
     }
 
-    public Course(String title, String instructor) {
+    public Course(int courseId, String title, String instructor) {
+        this.courseId = courseId;
         this.title = title;
         this.instructor = instructor;
     }
